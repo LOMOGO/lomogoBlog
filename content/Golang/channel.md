@@ -1,13 +1,9 @@
 ```
 {
-  "date": "2021.09.17 19:21",
-  "tags": ["golang","channel"],
-  "musicId":"109729"
+  "date": "2021.09.17 21:00",
+  "tags": ["LARAVEL"]
 }
 ```
-
-
-
 ## 数据结构
 
 channel 的底层数据结构是 hchan 的结构体，hchan 中包含如下一些字段：
