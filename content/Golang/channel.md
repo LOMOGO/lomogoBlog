@@ -1,7 +1,8 @@
 ```json
 {
   "date": "2021.09.17 21:00",
-  "tags": ["LARAVEL"]
+  "tags": ["LARAVEL"],
+  "description": "channel 的数据结构、阻塞以及 panic 的情况，还有一些需要注意的事项。"
 }
 ```
 ## 数据结构
