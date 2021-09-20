@@ -34,11 +34,11 @@ type hchan struct {
 
 
 
-![image-20210830170626488](/home/lomogo/.config/Typora/typora-user-images/image-20210830170626488.png)
+![image-20210830170626488](../../assets/images/image-20210830170626488.png)
 
 其中比较重要的就是`buf` ，`buf`指向一个环形队列，`hchan`结构体中记录了很多该环形队列的属性，例如该环形队列的容量、环形队列中存放元素的数量（该环形通道借助`qcount`来处理环形队列中元素个数为满或空的时候的二义性。）`sendx `、`recvx`分别是环形队列中首尾指针的下标，`buf`记录的是环形队列的指针地址，它们与环形队列的关系如图所示：
 
-![image-20210830173343706](/home/lomogo/.config/Typora/typora-user-images/image-20210830173343706.png)
+![image-20210830173343706](../../assets/images/image-20210830173343706.png)
 
 当发送数据（写）的时候环形队列已满或者接收（读）数据的时候环形队列为空，这个时候就会发生协程阻塞。
 
@@ -48,7 +48,7 @@ type hchan struct {
 
 环形队列与`sendq`、`recvq`的关系如下：
 
-![image-20210830175042606](/home/lomogo/.config/Typora/typora-user-images/image-20210830175042606.png)
+![image-20210830175042606](../../assets/images/image-20210830175042606.png)
 
 ## 阻塞/panic
 
